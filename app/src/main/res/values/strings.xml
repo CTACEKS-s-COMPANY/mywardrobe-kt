@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">MyWardrobe</string>
+
+    <string name="login">MyWardrobe\nlogin</string>
+    <string name="register">MyWardrobe register</string>
+    <string name="resetpassword">MyWardrobe\nresetpassword</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_wrong_password">Password must contain at least 8 characters.</string>
+
+    <string name="hint_username">Username</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_retry_password">Retry password</string>
+    <string name="button_log_in">Log in</string>
+    <string name="button_submit">submit</string>
+    <string name="button_reg">Register</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="filter_title">Filter</string>
+    <string name="search_title">Search</string>
+    <string name="product_title">Title</string>
+    <string name="product_description">Secondary text</string>
+    <string name="error_toast">Error, retry to enter another data</string>
+
+    <string name="account_label">My Account</string>
+    <string name="password_error_msg">Password must contain at least 8 characters.</string>
+    <string name="retry_password_error_msg">Passwords don\'t match!</string>
+    <string name="email_error_msg">Incorrect email</string>
+    <string name="i_have_account">I have account</string>
+    <string name="button_sign_out">Sign out</string>
+    <string name="tv_forgot_password">Forgot Password?</string>
+    <string name="click_to_register">Dont have account? Click to register!</string>
+    <string name="please_wait">Please, wait)</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="save_settings">Save</string>
+    <string name="profile">Profile</string>
+    <string name="items">Items</string>
+    <string name="outfit">Outfit</string>
+
+</resources>

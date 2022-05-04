@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_outfit"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="ru.alexsas.mywardrobe.screens.main.tabs.creating_outfit.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_outfitFragment"
+            app:destination="@id/outfitFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/outfitFragment"
+        android:name="ru.alexsas.mywardrobe.screens.main.tabs.creating_outfit.OutfitFragment"
+        android:label="fragment_outfit"
+        tools:layout="@layout/fragment_outfit" />
+
+</navigation>

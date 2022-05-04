@@ -1,0 +1,72 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Main.Theme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#E88282</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#B36877</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+    <style name="Theme.Autumn" parent="Main.Theme">
+        <item name="colorPrimary">#FFCF44</item>
+        <item name="colorPrimaryDark">#FD9725</item>
+        <item name="colorAccent">#FD9725</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorError">#FD9725</item>
+    </style>
+
+    <style name="SplashActivity" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+
+    <style name="Widget.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">
+            @style/TextAppearance.TextInputLayout.HintText
+        </item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textColorHint">?attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="TextAppearance.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="Widget.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="backgroundTint">@color/colorPrimaryDark</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">
+            @animator/next_button_state_list_anim
+        </item>
+    </style>
+
+    <style name="Widget.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="Widget.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">?attr/colorAccent</item>
+        <item name="android:theme">?theme</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Toolbar</item>
+    </style>
+
+    <style name="TextAppearance.Toolbar" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.Title" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+
+
+</resources>
