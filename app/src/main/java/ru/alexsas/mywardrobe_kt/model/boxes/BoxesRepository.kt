@@ -1,7 +1,7 @@
 package ua.cn.stu.navcomponent.tabs.model.boxes
 
 import kotlinx.coroutines.flow.Flow
-import ua.cn.stu.navcomponent.tabs.model.boxes.entities.Box
+import ru.alexsas.mywardrobe_kt.model.boxes.entities.Box
 
 interface BoxesRepository {
 

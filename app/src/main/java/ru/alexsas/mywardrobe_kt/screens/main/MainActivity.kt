@@ -1,19 +1,24 @@
-package ua.cn.stu.navcomponent.tabs.screens.main
+package ru.alexsas.mywardrobe_kt.screens.main
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import ua.cn.stu.navcomponent.tabs.R
-import ua.cn.stu.navcomponent.tabs.Repositories
-import ua.cn.stu.navcomponent.tabs.databinding.ActivityMainBinding
-import ua.cn.stu.navcomponent.tabs.screens.main.tabs.TabsFragment
-import ua.cn.stu.navcomponent.tabs.utils.viewModelCreator
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.ktx.Firebase
+import ru.alexsas.mywardrobe_kt.R
+import ru.alexsas.mywardrobe_kt.databinding.ActivityMainBinding
+import ru.alexsas.mywardrobe_kt.screens.main.tabs.TabsFragment
 import java.util.regex.Pattern
 
 /**
@@ -21,13 +26,14 @@ import java.util.regex.Pattern
  */
 class MainActivity : AppCompatActivity() {
 
-    // view-model is used for observing username to be displayed in the toolbar
-    private val viewModel by viewModelCreator { MainActivityViewModel(Repositories.accountsRepository) }
+    private lateinit var auth: FirebaseAuth
+
 
     // nav controller of the current screen
+
     private var navController: NavController? = null
 
-    private val topLevelsDestinations = setOf(getTabsDestination(), getSignInDestination())
+    private val topLevelDestinations = setOf(getTabsDestination(), getSignInDestination())
 
     // fragment listener is sued for tracking current nav controller
     private val fragmentListener = object : FragmentManager.FragmentLifecycleCallbacks() {
@@ -40,8 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
-        setSupportActionBar(binding.toolbar)
+//        val binding = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
         // preparing root nav controller
         val navController = getRootNavController()
@@ -50,10 +55,6 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.registerFragmentLifecycleCallbacks(fragmentListener, true)
 
-        // updating username in the toolbar
-        viewModel.username.observe(this) {
-            binding.usernameTextView.text = it
-        }
     }
 
     override fun onDestroy() {
@@ -97,50 +98,32 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val destinationListener = NavController.OnDestinationChangedListener { _, destination, arguments ->
-        supportActionBar?.title = prepareTitle(destination.label, arguments)
         supportActionBar?.setDisplayHomeAsUpEnabled(!isStartDestination(destination))
     }
 
     private fun isStartDestination(destination: NavDestination?): Boolean {
         if (destination == null) return false
         val graph = destination.parent ?: return false
-        val startDestinations = topLevelsDestinations + graph.startDestinationId
+        val startDestinations = topLevelDestinations + graph.startDestinationId
         return startDestinations.contains(destination.id)
     }
 
-    private fun prepareTitle(label: CharSequence?, arguments: Bundle?): String {
 
-        // code for this method has been copied from Google sources :)
 
-        if (label == null) return ""
-        val title = StringBuffer()
-        val fillInPattern = Pattern.compile("\\{(.+?)\\}")
-        val matcher = fillInPattern.matcher(label)
-        while (matcher.find()) {
-            val argName = matcher.group(1)
-            if (arguments != null && arguments.containsKey(argName)) {
-                matcher.appendReplacement(title, "")
-                title.append(arguments[argName].toString())
-            } else {
-                throw IllegalArgumentException(
-                    "Could not find $argName in $arguments to fill label $label"
-                )
-            }
-        }
-        matcher.appendTail(title)
-        return title.toString()
-    }
-
-    private fun isSignedIn(): Boolean {
-        val bundle = intent.extras ?: throw IllegalStateException("No required arguments")
-        val args = MainActivityArgs.fromBundle(bundle)
-        return args.isSignedI;
-    }
 
     private fun getMainNavigationGraphId(): Int = R.navigation.main_graph
 
     private fun getTabsDestination(): Int = R.id.tabsFragment
 
-    private fun getSignInDestination(): Int = R.id.signInFragment
+    private fun getSignInDestination(): Int = R.id.loginFragment
+
+
+    private fun isSignedIn(): Boolean {
+        val currentUser = auth.currentUser
+        if (currentUser != null) return true
+        return false
+    }
+
+
 
 }

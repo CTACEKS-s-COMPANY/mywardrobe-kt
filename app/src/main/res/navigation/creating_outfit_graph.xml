@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="ru.alexsas.mywardrobe.screens.main.tabs.creating_outfit.MainFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.creating_outfit.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/outfitFragment"
-        android:name="ru.alexsas.mywardrobe.screens.main.tabs.creating_outfit.OutfitFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.profile.AboutCreatersFragment"
         android:label="fragment_outfit"
         tools:layout="@layout/fragment_outfit" />
 

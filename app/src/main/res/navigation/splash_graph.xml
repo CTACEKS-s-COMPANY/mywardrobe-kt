@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="ru.alexsas.mywardrobe.screens.splash.SplashFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.splash.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" />
 
     <activity
         android:id="@+id/mainActivity"
-        android:name="ru.alexsas.mywardrobe.screens.main.MainActivity"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" >
     </activity>

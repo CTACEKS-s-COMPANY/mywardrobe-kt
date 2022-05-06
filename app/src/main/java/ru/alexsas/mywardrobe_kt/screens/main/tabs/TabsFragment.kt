@@ -1,12 +1,13 @@
-package ua.cn.stu.navcomponent.tabs.screens.main.tabs
+package ru.alexsas.mywardrobe_kt.screens.main.tabs
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import ua.cn.stu.navcomponent.tabs.R
-import ua.cn.stu.navcomponent.tabs.databinding.FragmentTabsBinding
+import ru.alexsas.mywardrobe_kt.R
+import ru.alexsas.mywardrobe_kt.databinding.FragmentTabsBinding
+
 
 class TabsFragment : Fragment(R.layout.fragment_tabs) {
 

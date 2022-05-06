@@ -1,4 +1,4 @@
-package ua.cn.stu.navcomponent.tabs.utils
+package ru.alexsas.mywardrobe_kt.utils
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData

@@ -6,8 +6,8 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import ua.cn.stu.navcomponent.tabs.model.boxes.BoxesRepository
-import ua.cn.stu.navcomponent.tabs.model.boxes.entities.Box
-import ua.cn.stu.navcomponent.tabs.utils.share
+import ru.alexsas.mywardrobe_kt.model.boxes.entities.Box
+import ru.alexsas.mywardrobe_kt.utils.share
 
 class DashboardViewModel(
     private val boxesRepository: BoxesRepository

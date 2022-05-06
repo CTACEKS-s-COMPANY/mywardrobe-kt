@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/tabsFragment"
-        android:name="ru.alexsas.mywardrobe.screens.main.tabs.TabsFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.TabsFragment"
         android:label="fragment_tabs"
         tools:layout="@layout/fragment_tabs" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="ru.alexsas.mywardrobe.screens.main.auth.LoginFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.auth.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login">
         <action
@@ -28,7 +28,7 @@
 
     <fragment
         android:id="@+id/registerFragment"
-        android:name="ru.alexsas.mywardrobe.screens.main.auth.RegisterFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.auth.RegisterFragment"
         android:label="RegisterFragment"
         tools:layout="@layout/fragment_register">
         <action
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="ru.alexsas.mywardrobe.screens.main.auth.ForgotPasswordFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.auth.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" />
 </navigation>

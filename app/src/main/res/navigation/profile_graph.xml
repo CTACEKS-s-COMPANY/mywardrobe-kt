@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="ru.alexsas.mywardrobe.screens.main.tabs.profile.ProfileFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="ru.alexsas.mywardrobe.screens.main.tabs.profile.SettingsFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.profile.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/editProfileFragment"
-        android:name="ru.alexsas.mywardrobe.screens.main.tabs.profile.EditProfileFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.profile.EditProfileFragment"
         android:label="fragment_edit_profile"
         tools:layout="@layout/fragment_edit_profile" />
 </navigation>

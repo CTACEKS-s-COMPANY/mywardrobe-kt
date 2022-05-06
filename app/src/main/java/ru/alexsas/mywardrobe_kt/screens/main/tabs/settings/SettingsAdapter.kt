@@ -1,29 +1,29 @@
-package ua.cn.stu.navcomponent.tabs.screens.main.tabs.settings
+package ru.alexsas.mywardrobe_kt.screens.main.tabs.settings
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
-import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import ua.cn.stu.navcomponent.tabs.R
-import ua.cn.stu.navcomponent.tabs.model.boxes.entities.Box
+import ru.alexsas.mywardrobe_kt.R
+import ua.cn.stu.navcomponent.tabs.screens.main.tabs.settings.BoxSettingsDiffCallback
+
 
 class SettingsAdapter(
-    private val listener: Listener
+//    private val listener: Listener
 ) : RecyclerView.Adapter<SettingsAdapter.Holder>(), View.OnClickListener {
 
     private var settings: List<BoxSetting> = emptyList()
 
     override fun onClick(v: View?) {
-        val checkBox = v as CheckBox
-        val box = v.tag as Box
-        if (checkBox.isChecked) {
-            listener.enableBox(box)
-        } else {
-            listener.disableBox(box)
-        }
+//        val checkBox = v as CheckBox
+//        val box = v.tag as Box
+//        if (checkBox.isChecked) {
+//            listener.enableBox(box)
+//        } else {
+//            listener.disableBox(box)
+//        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -43,7 +43,7 @@ class SettingsAdapter(
         }
 
         val colorName = context.getString(setting.box.colorNameRes)
-        holder.checkBox.text = context.getString(R.string.enable_checkbox, colorName)
+//        holder.checkBox.text = context.getString(R.string.enable_checkbox, colorName)
     }
 
     override fun getItemCount(): Int = settings.size
@@ -56,8 +56,8 @@ class SettingsAdapter(
 
     class Holder(val checkBox: CheckBox) : RecyclerView.ViewHolder(checkBox)
 
-    interface Listener {
-        fun enableBox(box: Box)
-        fun disableBox(box: Box)
-    }
+//    interface Listener {
+//        fun enableBox(box: Box)
+//        fun disableBox(box: Box)
+//    }
 }

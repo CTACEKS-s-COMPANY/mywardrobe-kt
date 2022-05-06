@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/additemFragment"
-        android:name="ru.alexsas.mywardrobe.screens.main.tabs.add_item.AdditemFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.add_item.AddItemFragment"
         android:label="fragment_additem"
         tools:layout="@layout/fragment_additem" />
 </navigation>

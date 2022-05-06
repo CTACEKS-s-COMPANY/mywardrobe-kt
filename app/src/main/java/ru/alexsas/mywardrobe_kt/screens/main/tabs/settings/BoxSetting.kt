@@ -1,6 +1,7 @@
-package ua.cn.stu.navcomponent.tabs.screens.main.tabs.settings
+package ru.alexsas.mywardrobe_kt.screens.main.tabs.settings
 
-import ua.cn.stu.navcomponent.tabs.model.boxes.entities.Box
+import ru.alexsas.mywardrobe_kt.model.boxes.entities.Box
+
 
 data class BoxSetting(
     val box: Box,

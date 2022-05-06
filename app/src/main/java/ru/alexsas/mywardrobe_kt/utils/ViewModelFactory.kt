@@ -1,9 +1,8 @@
-package ua.cn.stu.navcomponent.tabs.utils
+package ru.alexsas.mywardrobe_kt.utils
 
 import androidx.activity.ComponentActivity
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

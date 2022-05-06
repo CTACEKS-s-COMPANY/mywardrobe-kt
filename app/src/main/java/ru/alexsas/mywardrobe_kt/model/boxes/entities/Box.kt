@@ -1,4 +1,4 @@
-package ua.cn.stu.navcomponent.tabs.model.boxes.entities
+package ru.alexsas.mywardrobe_kt.model.boxes.entities
 
 import androidx.annotation.StringRes
 
