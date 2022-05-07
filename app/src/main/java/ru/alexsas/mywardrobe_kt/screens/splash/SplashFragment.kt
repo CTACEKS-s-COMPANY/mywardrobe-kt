@@ -2,6 +2,7 @@ package ru.alexsas.mywardrobe_kt.screens.splash
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import androidx.fragment.app.Fragment
 import ru.alexsas.mywardrobe_kt.R
@@ -21,7 +22,9 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
 
         // just some animations example
         renderAnimations()
-        launchMainScreen();
+        Handler().postDelayed({
+            launchMainScreen()
+        }, 1000)
     }
 
     private fun launchMainScreen() {

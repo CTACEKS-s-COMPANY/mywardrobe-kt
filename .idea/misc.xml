@@ -4,6 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/CTACEK/AndroidStudioProjects/mywardrobekt/app/src/main/res/layout/fragment_login.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/branded_menu.xml" value="0.321" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/close_menu.xml" value="0.321" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/filter.xml" value="0.321" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/logo.xml" value="0.321" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/main_icon.xml" value="0.321" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/main_icon_144.xml" value="0.321" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/menu.xml" value="0.321" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/search.xml" value="0.321" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/splash.xml" value="0.321" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/layout/activity_main.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/layout/activity_splash.xml" value="0.19947916666666668" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_add_item.xml" value="0.2015625" />
@@ -16,6 +25,8 @@
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_tabs.xml" value="0.2" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/layout/item_setting.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/menu/tabs_menu.xml" value="0.2015625" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.321" />
+        <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.321" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/xml/root_preferences.xml" value="0.171875" />
       </map>
     </option>

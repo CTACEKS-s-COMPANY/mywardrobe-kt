@@ -46,7 +46,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        auth = FirebaseAuth.getInstance()
 //        val binding = ActivityMainBinding.inflate(layoutInflater).also { setContentView(it.root) }
+//        setSupportActionBar(binding.toolbar)
 
         // preparing root nav controller
         val navController = getRootNavController()
@@ -87,8 +91,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun onNavControllerActivated(navController: NavController) {
         if (this.navController == navController) return
-        this.navController?.removeOnDestinationChangedListener(destinationListener)
-        navController.addOnDestinationChangedListener(destinationListener)
+//        this.navController?.removeOnDestinationChangedListener(destinationListener)
+//        navController.addOnDestinationChangedListener(destinationListener)
         this.navController = navController
     }
 
@@ -97,9 +101,9 @@ class MainActivity : AppCompatActivity() {
         return navHost.navController
     }
 
-    private val destinationListener = NavController.OnDestinationChangedListener { _, destination, arguments ->
-        supportActionBar?.setDisplayHomeAsUpEnabled(!isStartDestination(destination))
-    }
+//    private val destinationListener = NavController.OnDestinationChangedListener { _, destination, arguments ->
+//        supportActionBar?.setDisplayHomeAsUpEnabled(!isStartDestination(destination))
+//    }
 
     private fun isStartDestination(destination: NavDestination?): Boolean {
         if (destination == null) return false

@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import ru.alexsas.mywardrobe_kt.R
 import ru.alexsas.mywardrobe_kt.databinding.FragmentRegisterBinding
@@ -84,6 +85,7 @@ class RegisterFragment: Fragment(R.layout.fragment_register) {
                         context, "Account successfully created!",
                         Toast.LENGTH_SHORT
                     ).show()
+                    findNavController().navigate(R.id.action_registerFragment_to_tabsFragment);
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(ContentValues.TAG, "createUserWithEmail:failure", task.exception)
