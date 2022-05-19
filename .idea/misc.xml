@@ -5,6 +5,33 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="..\:/Users/CTACEK/AndroidStudioProjects/mywardrobekt/app/src/main/res/layout/fragment_login.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/drawable-v24/ic_dashboard.xml" value="0.193" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.193" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/drawable-v24/ic_profile.xml" value="0.193" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/drawable/branded_menu.xml" value="0.193" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/drawable/close_menu.xml" value="0.193" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/drawable/filter.xml" value="0.193" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/drawable/ic_baseline_autorenew_150.xml" value="0.193" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/drawable/ic_main_launcher.xml" value="0.193" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/drawable/logo.xml" value="0.193" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/drawable/main_icon.xml" value="0.193" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/drawable/main_icon_144.xml" value="0.193" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/activity_main.xml" value="0.3109375" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/activity_splash.xml" value="0.3078125" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_aboutcreators.xml" value="0.3078125" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_additem.xml" value="0.3078125" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_dashboard.xml" value="0.3078125" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_edit_profile.xml" value="0.3078125" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_forgot_password.xml" value="0.3078125" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_login.xml" value="0.3109375" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_main.xml" value="0.33" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_outfit.xml" value="0.33" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_profile.xml" value="0.3109375" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_register.xml" value="0.3109375" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_settings.xml" value="0.3109375" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_splash.xml" value="0.3109375" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_tabs.xml" value="0.3078125" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/item_setting.xml" value="0.1" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/branded_menu.xml" value="0.321" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/close_menu.xml" value="0.321" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/filter.xml" value="0.321" />

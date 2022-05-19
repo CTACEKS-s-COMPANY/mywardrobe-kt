@@ -85,7 +85,7 @@ class RegisterFragment: Fragment(R.layout.fragment_register) {
                         context, "Account successfully created!",
                         Toast.LENGTH_SHORT
                     ).show()
-                    findNavController().navigate(R.id.action_registerFragment_to_tabsFragment);
+                    findNavController().navigate(R.id.action_registerFragment_to_tabsFragment)
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(ContentValues.TAG, "createUserWithEmail:failure", task.exception)
