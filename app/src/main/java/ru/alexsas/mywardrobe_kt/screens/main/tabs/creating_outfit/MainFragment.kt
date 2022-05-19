@@ -19,16 +19,6 @@ class MainFragment() : Fragment(R.layout.fragment_main) {
 
         mBinding = FragmentMainBinding.bind(view)
 
-        mBinding.signOutButton.setOnClickListener { view ->
-//            FirebaseAuth.getInstance().signOut();
-            AuthUI.getInstance().signOut(requireContext())
-            //                Navigation.findNavController(view).navigate(R.id.loginFragment, null, new NavOptions.Builder().setPopUpTo(tabsFragment, true).build());
-            findTopNavController().navigate(R.id.loginFragment, null, navOptions {
-                popUpTo(R.id.tabsFragment) {
-                    inclusive = true
-                }
-            })
-        }
 
     }
 }

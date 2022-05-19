@@ -7,20 +7,5 @@
     tools:context=".screens.main.tabs.creating_outfit.MainFragment"
     android:background="@color/loginPageBackgroundColor">
 
-    <!-- TODO: Update blank fragment layout -->
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/sign_out_button"
-        style="@style/Widget.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="44dp"
-        android:text="@string/button_sign_out"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

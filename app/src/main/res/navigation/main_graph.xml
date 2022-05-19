@@ -13,6 +13,12 @@
         <action
             android:id="@+id/action_tabsFragment_to_newItemFragment"
             app:destination="@id/newItemFragment" />
+        <action
+            android:id="@+id/action_tabsFragment_to_aboutCreatersFragment"
+            app:destination="@id/aboutCreatersFragment" />
+        <action
+            android:id="@+id/action_tabsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -48,4 +54,13 @@
         android:id="@+id/newItemFragment"
         android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.wardrobe.NewItemFragment"
         android:label="NewItemFragment" />
+    <fragment
+        android:id="@+id/aboutCreatersFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.profile.AboutCreatersFragment"
+        android:label="AboutCreatersFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.profile.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

@@ -9,7 +9,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerClothes"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:background="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,13 +32,16 @@
 
         <ImageView
             style="@style/Main.Theme.Oops"
-            android:src="@drawable/pizza_monster" />
+            android:layout_width="match_parent"
+            android:src="@drawable/pizza_monster"
+            android:visibility="invisible"/>
 
         <TextView
             style="@style/TextAppearance.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:visibility="invisible"
             android:text="@string/no_clothes_in_database"
             android:textColor="@color/colorPrimary" />
 

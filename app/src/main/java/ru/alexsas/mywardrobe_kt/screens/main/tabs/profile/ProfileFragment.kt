@@ -4,11 +4,15 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.navOptions
+import com.firebase.ui.auth.AuthUI
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import ru.alexsas.mywardrobe_kt.R
 import ru.alexsas.mywardrobe_kt.databinding.FragmentProfileBinding
+import ru.alexsas.mywardrobe_kt.utils.findTopNavController
 
 import ru.alexsas.mywardrobe_kt.utils.observeEvent
-import ru.alexsas.mywardrobe_kt.utils.viewModelCreator
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -16,48 +20,27 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
     private lateinit var binding: FragmentProfileBinding
 
+    private lateinit var auth: FirebaseAuth
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentProfileBinding.bind(view)
 
-//        binding.editProfileButton.setOnClickListener { onEditProfileButtonPressed() }
-//        binding.logoutButton.setOnClickListener { onLogoutButtonPressed() }
+        binding.settingsButton.setOnClickListener{findTopNavController().navigate(R.id.settingsFragment)}
 
-//        observeAccountDetails()
-//        observeRestartAppFromLoginScreenEvent()
+        auth = Firebase.auth
+
     }
 
-//    private fun observeAccountDetails() {
-//        val formatter = SimpleDateFormat.getDateTimeInstance()
-//        viewModel.account.observe(viewLifecycleOwner) { account ->
-//            if (account == null) return@observe
-//            binding.emailTextView.text = account.email
-//            binding.usernameTextView.text = account.username
-//            binding.createdAtTextView.text = if (account.createdAt == Account.UNKNOWN_CREATED_AT)
-//                getString(R.string.placeholder)
-//            else
-//                formatter.format(Date(account.createdAt))
-//        }
-//    }
+    override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        if(currentUser != null){
+            binding.detail.text = getString(R.string.firebase_status_fmt, currentUser.uid)
+        }
+    }
 
-//    private fun onEditProfileButtonPressed() {
-//        findTopNavController().navigate(R.id.editProfileFragment)
-//    }
-
-//    private fun observeRestartAppFromLoginScreenEvent() {
-//        viewModel.restartWithSignInEvent.observeEvent(viewLifecycleOwner) {
-//            findTopNavController().navigate(R.id.signInFragment, null, navOptions {
-//                popUpTo(R.id.tabsFragment) {
-//                    inclusive = true
-//                }
-//            })
-//        }
-//    }
-
-//    private fun onLogoutButtonPressed() {
-//        viewModel.logout()
-//    }
 
 
 }

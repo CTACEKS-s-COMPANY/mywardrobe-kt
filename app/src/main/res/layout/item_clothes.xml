@@ -9,7 +9,7 @@
     android:padding="8dp">
 
     <ImageView
-        android:id="@+id/ClothesItemImage"
+        android:id="@+id/clothesItemImage"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:background="#991111"
@@ -20,14 +20,14 @@
 
     <TextView
         android:id="@+id/clothesItemType"
-        style="@style/Main.Theme"
+        style="@style/Main.Theme.Subheader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="20dp"
         android:ellipsize="end"
         android:maxLines="1"
-        app:layout_constraintStart_toEndOf="@id/ClothesItemImage"
-        app:layout_constraintTop_toTopOf="@id/ClothesItemImage"
+        app:layout_constraintStart_toEndOf="@id/clothesItemImage"
+        app:layout_constraintTop_toTopOf="@id/clothesItemImage"
         tools:text="Name of clothes" />
 
 
