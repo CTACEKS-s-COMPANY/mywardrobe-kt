@@ -30,6 +30,14 @@
           }
         },
         {
+          "client_id": "123850857919-q62qo2bajsvf0isgoim2r48h0j0lu1cv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.alexsas.mywardrobe",
+            "certificate_hash": "fd84514063e5b0bc174eeae77fff88f8ec6f242a"
+          }
+        },
+        {
           "client_id": "123850857919-sjvv0fi3v1th2icpkrpmlbm55bmes07u.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -72,6 +80,14 @@
           "android_info": {
             "package_name": "ru.alexsas.mywardrobe_kt",
             "certificate_hash": "26694bf8ff4950f717cfc91ef4d78fd895face45"
+          }
+        },
+        {
+          "client_id": "123850857919-cct6uigb3sl06g14hc0u1b5brgr06ttg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.alexsas.mywardrobe_kt",
+            "certificate_hash": "fd84514063e5b0bc174eeae77fff88f8ec6f242a"
           }
         },
         {

@@ -5,7 +5,7 @@
         android:title="@string/outfit"
         android:icon="@drawable/menu" />
     <item android:id="@id/add_item"
-        android:title="@string/items"
+        android:title="@string/wardrobe"
         android:icon="@drawable/ic_dashboard"/>
     <item android:id="@id/profile"
         android:title="@string/profile"

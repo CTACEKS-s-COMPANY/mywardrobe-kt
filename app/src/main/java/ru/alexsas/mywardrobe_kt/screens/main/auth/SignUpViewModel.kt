@@ -6,14 +6,14 @@
 //import androidx.lifecycle.viewModelScope
 //import kotlinx.coroutines.launch
 //import ua.cn.stu.navcomponent.tabs.R
-//import ua.cn.stu.navcomponent.tabs.model.AccountAlreadyExistsException
-//import ua.cn.stu.navcomponent.tabs.model.EmptyFieldException
-//import ua.cn.stu.navcomponent.tabs.model.Field
-//import ua.cn.stu.navcomponent.tabs.model.PasswordMismatchException
+//import ru.alexsas.mywardrobe_kt.model.AccountAlreadyExistsException
+//import ru.alexsas.mywardrobe_kt.model.EmptyFieldException
+//import ru.alexsas.mywardrobe_kt.model.Field
+//import ru.alexsas.mywardrobe_kt.model.PasswordMismatchException
 //import ua.cn.stu.navcomponent.tabs.model.accounts.entities.SignUpData
 //import ru.alexsas.mywardrobe_kt.utils.MutableUnitLiveEvent
 //import ru.alexsas.mywardrobe_kt.utils.publishEvent
-//import ua.cn.stu.navcomponent.tabs.utils.requireValue
+//import ru.alexsas.mywardrobe_kt.utils.requireValue
 //import ru.alexsas.mywardrobe_kt.utils.share
 //
 //class SignUpViewModel(

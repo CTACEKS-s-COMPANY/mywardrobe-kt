@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
-import ua.cn.stu.navcomponent.tabs.model.boxes.BoxesRepository
+import ru.alexsas.mywardrobe_kt.model.boxes.BoxesRepository
 import ru.alexsas.mywardrobe_kt.utils.MutableLiveEvent
 import ru.alexsas.mywardrobe_kt.utils.publishEvent
 import ru.alexsas.mywardrobe_kt.utils.share

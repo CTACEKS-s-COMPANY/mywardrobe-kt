@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_item"
+    app:startDestination="@id/WardrobeFragment">
+
+    <fragment
+        android:id="@+id/WardrobeFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.wardrobe.WardrobeFragment"
+        android:label="fragment_wardrobe"
+        tools:layout="@layout/fragment_wardrobe" />
+</navigation>

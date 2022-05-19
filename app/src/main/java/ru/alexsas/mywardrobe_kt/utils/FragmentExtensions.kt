@@ -1,4 +1,4 @@
-package ua.cn.stu.navcomponent.tabs.utils
+package ru.alexsas.mywardrobe_kt.utils
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController

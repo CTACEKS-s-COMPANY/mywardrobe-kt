@@ -4,7 +4,7 @@
     android:id="@+id/tabs_graph"
     app:startDestination="@id/create_outfit">
 
-    <include app:graph="@navigation/add_item_graph" />
+    <include app:graph="@navigation/wardrobe_graph" />
     <include app:graph="@navigation/profile_graph" />
     <include app:graph="@navigation/creating_outfit_graph" />
 

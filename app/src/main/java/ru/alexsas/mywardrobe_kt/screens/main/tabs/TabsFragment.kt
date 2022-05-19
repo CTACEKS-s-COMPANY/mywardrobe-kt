@@ -22,4 +22,6 @@ class TabsFragment : Fragment(R.layout.fragment_tabs) {
         NavigationUI.setupWithNavController(binding.bottomNavigationView, navController)
     }
 
+
+
 }

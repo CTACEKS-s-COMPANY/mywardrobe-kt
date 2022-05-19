@@ -4,12 +4,12 @@
 //import androidx.lifecycle.ViewModel
 //import androidx.lifecycle.viewModelScope
 //import kotlinx.coroutines.launch
-//import ua.cn.stu.navcomponent.tabs.model.AuthException
-//import ua.cn.stu.navcomponent.tabs.model.EmptyFieldException
-//import ua.cn.stu.navcomponent.tabs.model.Field
+//import ru.alexsas.mywardrobe_kt.model.AuthException
+//import ru.alexsas.mywardrobe_kt.model.EmptyFieldException
+//import ru.alexsas.mywardrobe_kt.model.Field
 //import ru.alexsas.mywardrobe_kt.utils.MutableUnitLiveEvent
 //import ru.alexsas.mywardrobe_kt.utils.publishEvent
-//import ua.cn.stu.navcomponent.tabs.utils.requireValue
+//import ru.alexsas.mywardrobe_kt.utils.requireValue
 //import ru.alexsas.mywardrobe_kt.utils.share
 //
 //class SignInViewModel(

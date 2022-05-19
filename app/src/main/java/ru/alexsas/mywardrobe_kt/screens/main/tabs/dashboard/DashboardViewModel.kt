@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import ua.cn.stu.navcomponent.tabs.model.boxes.BoxesRepository
+import ru.alexsas.mywardrobe_kt.model.boxes.BoxesRepository
 import ru.alexsas.mywardrobe_kt.model.boxes.entities.Box
 import ru.alexsas.mywardrobe_kt.utils.share
 

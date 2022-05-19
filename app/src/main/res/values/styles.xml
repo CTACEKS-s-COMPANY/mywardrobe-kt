@@ -10,6 +10,10 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
+    <style name="Main.Theme.Oops">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">150dp</item>
+    </style>
 
     <style name="Theme.Autumn" parent="Main.Theme">
         <item name="colorPrimary">#FFCF44</item>

@@ -50,5 +50,7 @@
     <string name="profile">Profile</string>
     <string name="items">Items</string>
     <string name="outfit">Outfit</string>
+    <string name="wardrobe">Wardrobe</string>
+    <string name="no_clothes_in_database">Ooops, we don\'t have any items</string>
 
 </resources>

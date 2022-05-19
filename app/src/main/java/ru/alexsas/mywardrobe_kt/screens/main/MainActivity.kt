@@ -15,6 +15,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import ru.alexsas.mywardrobe_kt.R
 import ru.alexsas.mywardrobe_kt.databinding.ActivityMainBinding
@@ -27,6 +28,7 @@ import java.util.regex.Pattern
 class MainActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
+    val db = Firebase.firestore
 
 
     // nav controller of the current screen
