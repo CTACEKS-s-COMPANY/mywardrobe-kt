@@ -6,12 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import ru.alexsas.mywardrobe_kt.screens.splash.SplashFragment
 import ru.alexsas.mywardrobe_kt.screens.splash.SplashViewModel
 
-/**
- * Entry point of the app.
- *
- * Splash activity contains only window background, all other initialization logic is placed to
- * [SplashFragment] and [SplashViewModel].
- */
+
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
 

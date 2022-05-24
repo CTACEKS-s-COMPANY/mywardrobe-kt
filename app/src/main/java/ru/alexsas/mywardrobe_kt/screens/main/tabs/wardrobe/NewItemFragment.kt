@@ -26,7 +26,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import ru.alexsas.mywardrobe_kt.R
 import ru.alexsas.mywardrobe_kt.databinding.FragmentAdditemBinding
-import ru.alexsas.mywardrobe_kt.model.Clothes
+import ru.alexsas.mywardrobe_kt.model.Item
 
 
 class NewItemFragment : Fragment(R.layout.fragment_additem) {
@@ -34,7 +34,7 @@ class NewItemFragment : Fragment(R.layout.fragment_additem) {
 
     private lateinit var binding: FragmentAdditemBinding
     private lateinit var firestore: FirebaseFirestore
-    private lateinit var clothes: Clothes
+    private lateinit var item: Item
     private lateinit var auth: FirebaseAuth
     private var mColor = 0
     private val taskData = HashMap<String, Any>()

@@ -1,31 +1,19 @@
 package ru.alexsas.mywardrobe_kt.screens.main.tabs.wardrobe
 
-import android.app.Activity
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import androidx.annotation.StringRes
-import androidx.appcompat.app.AlertDialog
-import androidx.core.text.HtmlCompat
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.firebase.ui.auth.AuthUI
-import com.firebase.ui.auth.ErrorCodes
-import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
-import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import ru.alexsas.mywardrobe_kt.R
-import ru.alexsas.mywardrobe_kt.adapter.ClothesAdapter
+import ru.alexsas.mywardrobe_kt.adapter.ItemAdapter
 import ru.alexsas.mywardrobe_kt.databinding.FragmentWardrobeBinding
 import ru.alexsas.mywardrobe_kt.utils.findTopNavController
 
@@ -33,10 +21,10 @@ class WardrobeFragment:Fragment(R.layout.fragment_wardrobe) {
 
     lateinit var firestore: FirebaseFirestore
     lateinit var auth: FirebaseAuth
-    lateinit var query: Query
+    private lateinit var userRef: DocumentReference
 
     private lateinit var binding: FragmentWardrobeBinding
-    lateinit var adapter: ClothesAdapter
+    lateinit var adapter: ItemAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentWardrobeBinding.inflate(inflater, container, false);
@@ -52,11 +40,13 @@ class WardrobeFragment:Fragment(R.layout.fragment_wardrobe) {
         firestore = Firebase.firestore
         auth = FirebaseAuth.getInstance()
 
-        query = firestore.collection("users")
-            .document(auth.uid.toString()).collection("clothes")
-        // RecyclerView
+        userRef = firestore.collection("users").document(auth.uid.toString())
 
-        adapter = object : ClothesAdapter(query) {
+        val itemsQuery = userRef.collection("clothes").orderBy("type", Query.Direction.DESCENDING)
+        //query.get()
+
+        // RecyclerView
+        adapter = object : ItemAdapter(itemsQuery) {
             override fun onDataChanged() {
                 // Show/hide content if the query returns empty.
                 if (itemCount == 0) {
@@ -86,7 +76,6 @@ class WardrobeFragment:Fragment(R.layout.fragment_wardrobe) {
 
     public override fun onStart() {
         super.onStart()
-
 
         // Start listening for Firestore updates
         adapter.startListening()

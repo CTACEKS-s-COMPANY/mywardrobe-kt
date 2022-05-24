@@ -28,7 +28,6 @@ import java.util.regex.Pattern
 class MainActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    val db = Firebase.firestore
 
 
     // nav controller of the current screen

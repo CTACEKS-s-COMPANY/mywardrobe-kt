@@ -12,23 +12,20 @@
         android:id="@+id/clothesItemImage"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="#991111"
         android:scaleType="centerCrop"
-        android:src="@drawable/main_icon_144"
+        android:src="@drawable/tshirt_for_loading"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/clothesItemType"
-        style="@style/Main.Theme.Subheader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginStart="20dp"
-        android:ellipsize="end"
-        android:maxLines="1"
         app:layout_constraintStart_toEndOf="@id/clothesItemImage"
         app:layout_constraintTop_toTopOf="@id/clothesItemImage"
-        tools:text="Name of clothes" />
+        android:text="@string/test_item"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

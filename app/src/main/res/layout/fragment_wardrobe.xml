@@ -28,22 +28,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="UseCompoundDrawables"
-        tools:visibility="visible">
+        tools:visibility="invisible">
 
         <ImageView
             style="@style/Main.Theme.Oops"
             android:layout_width="match_parent"
-            android:src="@drawable/pizza_monster"
-            android:visibility="invisible"/>
+            android:src="@drawable/ic_sad"
+            android:visibility="visible"
+            android:contentDescription="@string/no_items" />
 
         <TextView
             style="@style/TextAppearance.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:visibility="invisible"
-            android:text="@string/no_clothes_in_database"
-            android:textColor="@color/colorPrimary" />
+            android:textAlignment="center"
+            android:visibility="visible"
+            android:text="@string/no_clothes_in_database"/>
 
     </LinearLayout>
 
@@ -51,9 +52,10 @@
         android:id="@+id/newitembutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="40dp"
-        android:translationY="-28dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/additem_description"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_add_white_24px" />

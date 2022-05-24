@@ -3,23 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/create_outfit"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/OutfitFragment">
 
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.creating_outfit.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
-        <action
-            android:id="@+id/action_mainFragment_to_outfitFragment"
-            app:destination="@id/outfitFragment" />
-
-    </fragment>
-
-    <fragment
-        android:id="@+id/outfitFragment"
-        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.profile.AboutCreatersFragment"
-        android:label="fragment_outfit"
+        android:id="@+id/OutfitFragment"
+        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.creating_outfit.OutfitFragment"
+        android:label="outfitfragment"
         tools:layout="@layout/fragment_outfit" />
 
 </navigation>
