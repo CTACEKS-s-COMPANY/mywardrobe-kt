@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="..\:/Users/CTACEK/AndroidStudioProjects/mywardrobekt/app/src/main/res/layout/fragment_login.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/branded_menu.xml" value="0.321" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/close_menu.xml" value="0.321" />
@@ -44,6 +45,7 @@
         <entry key="app/src/main/res/drawable/search.xml" value="0.142" />
         <entry key="app/src/main/res/drawable/splash.xml" value="0.142" />
         <entry key="app/src/main/res/drawable/tshirt_for_loading.xml" value="0.1145" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2617283950617284" />
         <entry key="app/src/main/res/layout/fragment_aboutcreators.xml" value="0.13177083333333334" />
         <entry key="app/src/main/res/layout/fragment_additem.xml" value="0.25" />

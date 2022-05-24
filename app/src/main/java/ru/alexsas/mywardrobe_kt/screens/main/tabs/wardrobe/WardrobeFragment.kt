@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
@@ -21,10 +22,10 @@ class WardrobeFragment:Fragment(R.layout.fragment_wardrobe) {
 
     lateinit var firestore: FirebaseFirestore
     lateinit var auth: FirebaseAuth
+    lateinit var adapter: ItemAdapter
     private lateinit var userRef: DocumentReference
 
     private lateinit var binding: FragmentWardrobeBinding
-    lateinit var adapter: ItemAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentWardrobeBinding.inflate(inflater, container, false);
@@ -42,8 +43,7 @@ class WardrobeFragment:Fragment(R.layout.fragment_wardrobe) {
 
         userRef = firestore.collection("users").document(auth.uid.toString())
 
-        val itemsQuery = userRef.collection("clothes").orderBy("type", Query.Direction.DESCENDING)
-        //query.get()
+        val itemsQuery = userRef.collection("clothes")
 
         // RecyclerView
         adapter = object : ItemAdapter(itemsQuery) {
@@ -58,8 +58,6 @@ class WardrobeFragment:Fragment(R.layout.fragment_wardrobe) {
                 }
             }
 
-            override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            }
 
             override fun onError(e: FirebaseFirestoreException) {
                 // Show a snackbar on errors
@@ -68,13 +66,12 @@ class WardrobeFragment:Fragment(R.layout.fragment_wardrobe) {
             }
         }
 
-        binding.recyclerClothes.layoutManager = LinearLayoutManager(context)
         binding.recyclerClothes.adapter = adapter
         binding.newitembutton.setOnClickListener { findTopNavController().navigate(R.id.action_tabsFragment_to_newItemFragment) }
 
     }
 
-    public override fun onStart() {
+    override fun onStart() {
         super.onStart()
 
         // Start listening for Firestore updates
