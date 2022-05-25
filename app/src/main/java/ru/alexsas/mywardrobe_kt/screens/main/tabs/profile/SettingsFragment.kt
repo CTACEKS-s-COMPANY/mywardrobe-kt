@@ -19,7 +19,7 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
 
         mBinding = FragmentSettingsBinding.bind(view)
 
-        mBinding.signOutButton.setOnClickListener { view ->
+        mBinding.signOutButton.setOnClickListener {
             AuthUI.getInstance().signOut(requireContext())
             findTopNavController().navigate(R.id.loginFragment, null, navOptions {
                 popUpTo(R.id.tabsFragment) {

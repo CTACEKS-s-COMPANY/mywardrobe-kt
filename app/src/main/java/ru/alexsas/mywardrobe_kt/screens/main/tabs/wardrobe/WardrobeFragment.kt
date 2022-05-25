@@ -1,10 +1,18 @@
 package ru.alexsas.mywardrobe_kt.screens.main.tabs.wardrobe
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
+import android.widget.RadioButton
+import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.github.dhaval2404.colorpicker.ColorPickerDialog
+import com.github.dhaval2404.colorpicker.model.ColorShape
+import com.github.dhaval2404.colorpicker.util.SharedPref
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
@@ -24,6 +32,9 @@ class WardrobeFragment:Fragment(R.layout.fragment_wardrobe) {
     lateinit var auth: FirebaseAuth
     lateinit var adapter: ItemAdapter
     private lateinit var userRef: DocumentReference
+    private var mColor = 0
+    private val taskData = HashMap<String, Any>()
+    private var newbuttonclicked = false
 
     private lateinit var binding: FragmentWardrobeBinding
 
@@ -44,9 +55,40 @@ class WardrobeFragment:Fragment(R.layout.fragment_wardrobe) {
         userRef = firestore.collection("users").document(auth.uid.toString())
 
         val itemsQuery = userRef.collection("clothes")
+        val primaryColor = ContextCompat.getColor(requireContext(), R.color.colorPrimary)
+        mColor = SharedPref(requireContext()).getRecentColor(primaryColor)
+
+
+        binding.radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            // get the radio group checked radio button
+            binding.radioGroup.findViewById<RadioButton>(checkedId)?.apply {
+                // show the checked radio button's text in text view
+                taskData["type"] = text.toString()
+                binding.radioGroup.visibility = View.GONE
+                binding.paletteButton.visibility = View.VISIBLE
+            }
+        }
+
+        binding.paletteButton.setOnClickListener { _ ->
+            ColorPickerDialog
+                .Builder(requireActivity()) // Pass Activity Instance
+                .setColorShape(ColorShape.SQAURE) // Or ColorShape.CIRCLE
+                .setDefaultColor(mColor) // Pass Default Color
+                .setColorListener { color, _ ->
+                    mColor = color
+                    taskData["color"] = color
+                    binding.paletteButton.visibility = View.GONE
+                    binding.sendButton.visibility = View.VISIBLE
+                }
+                .setDismissListener {
+                    Log.d("ColorPickerDialog", "Handle dismiss event")
+                }
+                .show()
+        }
 
         // RecyclerView
         adapter = object : ItemAdapter(itemsQuery) {
+
             override fun onDataChanged() {
                 // Show/hide content if the query returns empty.
                 if (itemCount == 0) {
@@ -67,9 +109,46 @@ class WardrobeFragment:Fragment(R.layout.fragment_wardrobe) {
         }
 
         binding.recyclerClothes.adapter = adapter
-        binding.newitembutton.setOnClickListener { findTopNavController().navigate(R.id.action_tabsFragment_to_newItemFragment) }
+
+        binding.newitembutton.setOnClickListener {
+            if (!newbuttonclicked) {
+                binding.newitem.visibility = View.VISIBLE
+                newbuttonclicked = true
+            }
+            else {
+                binding.radioGroup.clearCheck()
+                binding.newitem.visibility = View.INVISIBLE
+                binding.paletteButton.visibility = View.INVISIBLE
+                binding.sendButton.visibility = View.INVISIBLE
+                binding.radioGroup.visibility = View.VISIBLE
+                newbuttonclicked = false
+                taskData.clear()
+            }
+        }
+
+        binding.sendButton.setOnClickListener {
+            auth.currentUser?.let {
+                firestore.collection("users").document(it.uid).collection("clothes").add(taskData)
+                    .addOnSuccessListener {
+                        Log.i("FireStoreItem", "Successfully added item")
+                    }
+                    .addOnFailureListener {
+                        Log.i("FireStoreItem", "Bad news, item wasn't be saved (")
+                        Toast.makeText(context, "Bad news, item wasn't be saved (", Toast.LENGTH_SHORT).show()
+                    }
+            }
+
+            taskData.clear()
+            newbuttonclicked = false
+            binding.radioGroup.clearCheck()
+            binding.newitem.visibility = View.INVISIBLE
+            binding.paletteButton.visibility = View.INVISIBLE
+            binding.sendButton.visibility = View.INVISIBLE
+            binding.radioGroup.visibility = View.VISIBLE
+        }
 
     }
+
 
     override fun onStart() {
         super.onStart()
@@ -78,7 +157,7 @@ class WardrobeFragment:Fragment(R.layout.fragment_wardrobe) {
         adapter.startListening()
     }
 
-    public override fun onStop() {
+    override fun onStop() {
         super.onStop()
         adapter.stopListening()
     }

@@ -11,12 +11,6 @@
         android:label="fragment_tabs"
         tools:layout="@layout/fragment_tabs" >
         <action
-            android:id="@+id/action_tabsFragment_to_newItemFragment"
-            app:destination="@id/newItemFragment" />
-        <action
-            android:id="@+id/action_tabsFragment_to_aboutCreatersFragment"
-            app:destination="@id/aboutCreatersFragment" />
-        <action
             android:id="@+id/action_tabsFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
     </fragment>
@@ -50,14 +44,6 @@
         android:name="ru.alexsas.mywardrobe_kt.screens.main.auth.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" />
-    <fragment
-        android:id="@+id/newItemFragment"
-        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.wardrobe.NewItemFragment"
-        android:label="NewItemFragment" />
-    <fragment
-        android:id="@+id/aboutCreatersFragment"
-        android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.profile.AboutCreatersFragment"
-        android:label="AboutCreatersFragment" />
     <fragment
         android:id="@+id/settingsFragment"
         android:name="ru.alexsas.mywardrobe_kt.screens.main.tabs.profile.SettingsFragment"

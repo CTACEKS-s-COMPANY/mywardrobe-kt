@@ -3,8 +3,7 @@ package ru.alexsas.mywardrobe_kt
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import ru.alexsas.mywardrobe_kt.screens.splash.SplashFragment
-import ru.alexsas.mywardrobe_kt.screens.splash.SplashViewModel
+
 
 
 @SuppressLint("CustomSplashScreen")

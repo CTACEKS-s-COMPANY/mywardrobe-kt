@@ -8,6 +8,7 @@
         <item name="colorAccent">#B36877</item>
         <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="shapeAppearanceSmallComponent">@style/App.SmallComponent</item>
     </style>
 
     <style name="Main.Theme.Subheader">
@@ -55,6 +56,10 @@
         </item>
     </style>
 
+    <style name="Widget.Button.Oval" parent="Widget.Button">
+        <item name="android:background">@drawable/oval_button</item>
+    </style>
+
     <style name="Widget.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
@@ -76,6 +81,11 @@
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
-
+    <style name="App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnSurface">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorPrimary</item>
+        <item name="colorOnSecondary">@color/colorPrimaryDark</item>
+    </style>
 
 </resources>

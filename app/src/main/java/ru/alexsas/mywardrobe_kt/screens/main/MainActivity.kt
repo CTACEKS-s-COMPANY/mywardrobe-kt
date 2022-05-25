@@ -1,26 +1,17 @@
 package ru.alexsas.mywardrobe_kt.screens.main
 
-import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 import ru.alexsas.mywardrobe_kt.R
-import ru.alexsas.mywardrobe_kt.databinding.ActivityMainBinding
 import ru.alexsas.mywardrobe_kt.screens.main.tabs.TabsFragment
-import java.util.regex.Pattern
 
 /**
  * Container for all screens in the app.

@@ -37,7 +37,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
         if(currentUser != null){
-            binding.detail.text = getString(R.string.firebase_status_fmt, currentUser.uid)
+            binding.detail.text = getString(R.string.firebase_status_fmt, currentUser.displayName)
         }
     }
 
