@@ -15,4 +15,18 @@
     <color name="loginPageBackgroundColor">#FFFFFF</color>
     <color name="productGridBackgroundColor">#FFFFFF</color>
     <color name="textInputOutlineColor">#FBB8AC</color>
+
+
+    <color name="BodyColor">#D5A590</color>
+
+    <color name="pantscolor">#FBB8AC</color>
+    <color name="pantsbandcolor">#BA7A6F</color>
+
+    <color name="ShirtColor">#FBB8AC</color>
+    <color name="ShirtBandColor">#BA7A6F</color>
+
+    <color name="BootsTopColor">#DBDBDB</color>
+    <color name="BootsBottomColor">#ACACAC</color>
+
+
 </resources>

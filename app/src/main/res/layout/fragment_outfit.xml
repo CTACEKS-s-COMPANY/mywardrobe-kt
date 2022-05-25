@@ -2,51 +2,164 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
+    android:id="@+id/constraintlayoutView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="visible"
+    android:background="@drawable/outfit_background"
     tools:context=".screens.main.tabs.creating_outfit.OutfitFragment">
 
-    <Button
-        android:id="@+id/matchColorButton"
-        android:layout_width="131dp"
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/swapButton"
+        style="@style/Widget.Button"
+        android:layout_width="130dp"
         android:layout_height="60dp"
-        android:layout_marginTop="40dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/swap_button"
+        app:layout_constraintBottom_toBottomOf="@+id/matchTwoColorButton"
+        app:layout_constraintStart_toStartOf="@+id/CollorViewTop"
+        app:layout_constraintTop_toTopOf="@+id/matchTwoColorButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
-        android:id="@+id/view"
-        android:layout_width="343dp"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/CollorViewBottom"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/matchThreeColorButton"
+        app:layout_constraintEnd_toStartOf="@+id/matchThreeColorButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/matchColorButton" />
+        app:layout_constraintStart_toEndOf="@+id/CollorViewMiddle"
+        app:layout_constraintTop_toTopOf="@+id/matchThreeColorButton" />
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="343dp"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
-
-    <View
-        android:id="@+id/view3"
-        android:layout_width="343dp"
-        android:layout_height="100dp"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/matchThreeColorButton"
+        style="@style/Widget.Button"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="96dp"
+        android:text="@string/create_outlook_3_items"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/CollorViewBottom" />
+
+    <View
+        android:id="@+id/CollorViewMiddle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/CollorViewBottom"
+        app:layout_constraintEnd_toStartOf="@+id/CollorViewBottom"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/CollorViewTop"
+        app:layout_constraintTop_toTopOf="@+id/CollorViewBottom" />
+
+    <View
+        android:id="@+id/CollorViewTop"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/CollorViewMiddle"
+        app:layout_constraintEnd_toStartOf="@+id/CollorViewMiddle"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        app:layout_constraintTop_toTopOf="@+id/CollorViewMiddle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/matchTwoColorButton"
+        style="@style/Widget.Button"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:text="@string/create_outlook_2_items"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/matchThreeColorButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/matchThreeColorButton"
+        app:layout_constraintTop_toBottomOf="@+id/matchThreeColorButton"
+        app:layout_constraintVertical_bias="0.555" />
+
+    <ImageView
+        android:id="@+id/BodyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/woman"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="109dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/primary_colors_text"
+        app:layout_constraintBottom_toTopOf="@+id/CollorViewTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98" />
+
+    <ImageView
+        android:id="@+id/PantsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:src="@drawable/pants_woman"
+        app:layout_constraintBottom_toBottomOf="@+id/BodyView"
+        app:layout_constraintEnd_toEndOf="@+id/BodyView"
+        app:layout_constraintStart_toStartOf="@+id/BodyView"
+        app:layout_constraintTop_toTopOf="@+id/BodyView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/ShirtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:src="@drawable/shirt_woman"
+        app:layout_constraintBottom_toBottomOf="@+id/BodyView"
+        app:layout_constraintEnd_toEndOf="@+id/PantsView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/BodyView"
+        app:layout_constraintTop_toTopOf="@+id/BodyView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/BootsTopView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/boots_top_woman"
+        app:layout_constraintBottom_toBottomOf="@+id/PantsView"
+        app:layout_constraintEnd_toEndOf="@+id/BodyView"
+        app:layout_constraintStart_toStartOf="@+id/BodyView"
+        app:layout_constraintTop_toTopOf="@+id/BodyView" />
+
+    <ImageView
+        android:id="@+id/BootsBottomView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/boots_bottom_woman"
+        app:layout_constraintBottom_toBottomOf="@+id/BodyView"
+        app:layout_constraintEnd_toEndOf="@+id/BodyView"
+        app:layout_constraintStart_toStartOf="@+id/BootsTopView"
+        app:layout_constraintTop_toTopOf="@+id/BodyView" />
+
+    <ImageView
+        android:id="@+id/PantsBandView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pants_band_woman"
+        app:layout_constraintEnd_toEndOf="@+id/BodyView"
+        app:layout_constraintStart_toStartOf="@+id/BodyView"
+        app:layout_constraintTop_toTopOf="@+id/BodyView" />
+
+    <ImageView
+        android:id="@+id/ShirtBandView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shirt_band_woman"
+        app:layout_constraintBottom_toBottomOf="@+id/BodyView"
+        app:layout_constraintEnd_toEndOf="@+id/BodyView"
+        app:layout_constraintStart_toStartOf="@+id/BodyView"
+        app:layout_constraintTop_toTopOf="@+id/BodyView" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
