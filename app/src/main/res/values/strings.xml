@@ -66,8 +66,8 @@
     <string name="test_item">Test item</string>
     <string name="swap_button">Swap colors</string>
     <string name="primary_colors_text">Primary colors</string>
-    <string name="create_outlook_3_items">Create outlook(3)</string>
-    <string name="create_outlook_2_items">Create outlook(2)</string>
+    <string name="create_outlook_items">Generate</string>
     <string name="no_items">No items</string>
+    <string name="switch_button_name">Number of colors</string>
 
 </resources>

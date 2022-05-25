@@ -18,25 +18,33 @@ class OutfitFragment() : Fragment(R.layout.fragment_outfit) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         var rand_max = 180
         var rand_min = 0
-        var r:Int
-        var g:Int
-        var b:Int
+        var r: Int
+        var g: Int
+        var b: Int
+        var switchOn: Boolean = true
+
         super.onViewCreated(view, savedInstanceState)
         mBinding = FragmentOutfitBinding.bind(view)
 
-        mBinding.matchTwoColorButton.setOnClickListener() {
-            r = Random.nextInt(rand_min,rand_max)
-            g = Random.nextInt(rand_min,rand_max)
-            b = Random.nextInt(rand_min,rand_max)
-            matchTwoColorPressed(r,g,b)
-        }
-        mBinding.matchThreeColorButton.setOnClickListener(){
-            r = Random.nextInt(rand_min,rand_max)
-            g = Random.nextInt(rand_min,rand_max)
-            b = Random.nextInt(rand_min,rand_max)
-            matchTreeColorPressed( r,g,b)
+        mBinding.Switcher.setOnCheckedChangeListener { compoundButton, isChecked ->
+            switchOn = isChecked
         }
 
+        mBinding.GenerateButton.setOnClickListener() {
+            if (switchOn){
+                r = Random.nextInt(rand_min, rand_max)
+                g = Random.nextInt(rand_min, rand_max)
+                b = Random.nextInt(rand_min, rand_max)
+                matchTwoColorPressed(r, g, b)
+            }
+            else{
+                r = Random.nextInt(rand_min, rand_max)
+                g = Random.nextInt(rand_min, rand_max)
+                b = Random.nextInt(rand_min, rand_max)
+                matchTreeColorPressed(r, g, b)
+            }
+
+        }
     }
 
     private fun matchTwoColorPressed(r:Int,g:Int,b:Int){
@@ -158,8 +166,8 @@ class OutfitFragment() : Fragment(R.layout.fragment_outfit) {
     fun LC(a:Int):Int{
         if (a > 30) return a-30
         return a
-    }
-    /*private fun nearCollors(color1: Color, color2: Color) : Boolean{
+    }/*
+    private fun nearCollors(color1: Color, color2: Color) : Boolean{
         val r:=
     }*/
 }
