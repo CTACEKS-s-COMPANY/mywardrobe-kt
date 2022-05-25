@@ -2,14 +2,13 @@ package ru.alexsas.mywardrobe_kt.screens.main.tabs.wardrobe
 
 import android.os.Bundle
 import android.util.Log
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.github.dhaval2404.colorpicker.ColorPickerDialog
 import com.github.dhaval2404.colorpicker.model.ColorShape
 import com.github.dhaval2404.colorpicker.util.SharedPref
@@ -18,19 +17,17 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
-import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import ru.alexsas.mywardrobe_kt.R
 import ru.alexsas.mywardrobe_kt.adapter.ItemAdapter
 import ru.alexsas.mywardrobe_kt.databinding.FragmentWardrobeBinding
-import ru.alexsas.mywardrobe_kt.utils.findTopNavController
 
 class WardrobeFragment:Fragment(R.layout.fragment_wardrobe) {
 
-    lateinit var firestore: FirebaseFirestore
+    private lateinit var firestore: FirebaseFirestore
     lateinit var auth: FirebaseAuth
-    lateinit var adapter: ItemAdapter
+    private lateinit var adapter: ItemAdapter
     private lateinit var userRef: DocumentReference
     private var mColor = 0
     private val taskData = HashMap<String, Any>()
@@ -38,9 +35,9 @@ class WardrobeFragment:Fragment(R.layout.fragment_wardrobe) {
 
     private lateinit var binding: FragmentWardrobeBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = FragmentWardrobeBinding.inflate(inflater, container, false);
-        return binding.root;
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        binding = FragmentWardrobeBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -69,7 +66,7 @@ class WardrobeFragment:Fragment(R.layout.fragment_wardrobe) {
             }
         }
 
-        binding.paletteButton.setOnClickListener { _ ->
+        binding.paletteButton.setOnClickListener {
             ColorPickerDialog
                 .Builder(requireActivity()) // Pass Activity Instance
                 .setColorShape(ColorShape.SQAURE) // Or ColorShape.CIRCLE

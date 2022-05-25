@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import ru.alexsas.mywardrobe_kt.R
 import ru.alexsas.mywardrobe_kt.databinding.FragmentOutfitBinding
 import ru.alexsas.mywardrobe_kt.utils.MatchingColorUtil
-import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.random.Random

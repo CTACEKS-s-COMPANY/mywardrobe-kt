@@ -1,17 +1,11 @@
 package ru.alexsas.mywardrobe_kt.adapter
 
 import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.database.collection.LLRBNode
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.Query
-import com.google.firebase.firestore.ktx.toObject
-import ru.alexsas.mywardrobe_kt.R
 import ru.alexsas.mywardrobe_kt.databinding.ItemClothesBinding
 import ru.alexsas.mywardrobe_kt.model.Item
 
@@ -31,7 +25,6 @@ abstract class ItemAdapter(query: Query) :
 
 
     class ViewHolder(val binding: ItemClothesBinding) : RecyclerView.ViewHolder(binding.root) {
-        private val textView: TextView = binding.clothesItemType
 
         fun bind(snapshot: DocumentSnapshot) {
             val item: Item? = snapshot.toObject(Item::class.java)

@@ -1,5 +1,6 @@
 package ru.alexsas.mywardrobe_kt.adapter
 
+import android.annotation.SuppressLint
 import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import com.google.firebase.firestore.DocumentChange
@@ -56,6 +57,7 @@ abstract class FirestoreAdapter<VH : RecyclerView.ViewHolder>(private var query:
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun stopListening() {
         registration?.remove()
         registration = null
@@ -64,6 +66,7 @@ abstract class FirestoreAdapter<VH : RecyclerView.ViewHolder>(private var query:
         notifyDataSetChanged()
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setQuery(query: Query) {
         // Stop listening
         stopListening()

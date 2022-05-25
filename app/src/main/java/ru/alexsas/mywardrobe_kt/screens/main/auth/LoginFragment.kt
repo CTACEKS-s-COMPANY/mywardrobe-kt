@@ -8,16 +8,12 @@ import android.util.Patterns
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import ru.alexsas.mywardrobe_kt.R
@@ -40,16 +36,16 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
         //Buttons
         mBinding.logInButton.setOnClickListener{
-            val email: String = mBinding.emailEditText.getText().toString()
-            val password: String = mBinding.passwordEditText.getText().toString()
+            val email: String = mBinding.emailEditText.text.toString()
+            val password: String = mBinding.passwordEditText.text.toString()
             signInEmail(email, password)
         }
 
         mBinding.signInButton.setOnClickListener{ googlesignIn() }
 
-        mBinding.passwordEditText.setOnKeyListener{ view, i, keyEvent ->
-            if (mBinding.passwordEditText.getText().toString().isNotEmpty()) {
-                mBinding.passwordTextInput.setError(null)
+        mBinding.passwordEditText.setOnKeyListener{ _, _, _ ->
+            if (mBinding.passwordEditText.text.toString().isNotEmpty()) {
+                mBinding.passwordTextInput.error = null
             }
             false
         }
@@ -87,7 +83,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             try {
                 // Google Sign In was successful, authenticate with Firebase
                 val account = task.getResult(ApiException::class.java)!!
-                Log.d(TAG, "firebaseAuthWithGoogle:" + account.getId())
+                Log.d(TAG, "firebaseAuthWithGoogle:" + account.id)
                 firebaseAuthWithGoogle(account.idToken!!)
             } catch (e: ApiException) {
                 // Google Sign In failed
@@ -107,7 +103,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                     findNavController().navigate(R.id.action_loginFragment_to_tabsFragment)
                 } else {
                     // If sign in fails, display a message to the user.
-                    Log.w(TAG, "signInWithCredential:failure", task.getException())
+                    Log.w(TAG, "signInWithCredential:failure", task.exception)
                     Snackbar.make(
                         mBinding.loginlayout,
                         "Authentication Failed.",
@@ -120,19 +116,19 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private fun validateForm(): Boolean {
         var valid = true
-        val email: String = mBinding.emailEditText.getText().toString()
-        if (TextUtils.isEmpty(email) && !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            mBinding.emailTextInput.setError(getString(R.string.email_error_msg))
+        var email: String = mBinding.emailEditText.text.toString()
+        if (TextUtils.isEmpty(email) || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            mBinding.emailTextInput.error = getString(R.string.email_error_msg)
             valid = false
         } else {
-            mBinding.emailTextInput.setError(null)
+            mBinding.emailTextInput.error = null
         }
-        val password: String = mBinding.passwordEditText.getText().toString()
+        val password: String = mBinding.passwordEditText.text.toString()
         if (TextUtils.isEmpty(password) || password.length <= 8) {
-            mBinding.passwordTextInput.setError(getString(R.string.password_error_msg))
+            mBinding.passwordTextInput.error = getString(R.string.password_error_msg)
             valid = false
         } else {
-            mBinding.passwordTextInput.setError(null)
+            mBinding.passwordTextInput.error = null
         }
         return valid
     }
@@ -155,7 +151,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                     findNavController().navigate(R.id.action_loginFragment_to_tabsFragment)
                 } else {
                     // If sign in fails, display a message to the user.
-                    Log.w(TAG, "signInWithEmail:failure", task.getException())
+                    Log.w(TAG, "signInWithEmail:failure", task.exception)
                     Toast.makeText(
                         context, """
      There is no such account, please check
@@ -165,11 +161,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                     ).show()
                 }
             }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-//        mBinding = null
     }
 
     companion object {

@@ -37,7 +37,7 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/settings_button"
-        style="@style/App.SmallComponent"
+        style="@style/Widget.Button"
         android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"

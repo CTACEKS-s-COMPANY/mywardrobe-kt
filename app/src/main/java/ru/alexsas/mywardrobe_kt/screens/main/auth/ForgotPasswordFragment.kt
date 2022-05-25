@@ -18,10 +18,6 @@ class ForgotPasswordFragment: Fragment(R.layout.fragment_forgot_password) {
 
     private lateinit var mAuth: FirebaseAuth
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -29,7 +25,7 @@ class ForgotPasswordFragment: Fragment(R.layout.fragment_forgot_password) {
         mBinding.cancelButton.setOnClickListener{findNavController().popBackStack() }
 
         mBinding.submitButton.setOnClickListener{
-            val email: String = mBinding.emailEditText.getText().toString()
+            val email: String = mBinding.emailEditText.text.toString()
             if (validateemail()) {
                 mAuth.sendPasswordResetEmail(email)
                     .addOnCompleteListener { task ->
@@ -49,19 +45,14 @@ class ForgotPasswordFragment: Fragment(R.layout.fragment_forgot_password) {
 
     private fun validateemail(): Boolean {
         var valid = true
-        val email: String = mBinding.emailEditText.getText().toString()
-        if (TextUtils.isEmpty(email) && !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            mBinding.emailTextInput.setError(getString(R.string.email_error_msg))
+        val email: String = mBinding.emailEditText.text.toString()
+        if (TextUtils.isEmpty(email) || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            mBinding.emailTextInput.error = getString(R.string.email_error_msg)
             valid = false
         } else {
-            mBinding.emailTextInput.setError(null)
+            mBinding.emailTextInput.error = null
         }
         return valid
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-//        mBinding = null
     }
 
 }

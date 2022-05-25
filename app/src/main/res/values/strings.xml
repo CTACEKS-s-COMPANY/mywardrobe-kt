@@ -71,4 +71,8 @@
     <string name="settingsbutton">SettingsButton</string>
     <string name="profileimage">ProfileImage</string>
     <string name="creators_image">Creators image</string>
+    <string name="about_app">About app</string>
+    <string name="text_about_us">This application was made by Stanislav Yudov and Alexander Pravdin, students of RTU MIREA, during additional courses from Samsung. We are very grateful to all the creators of this project, especially our teacher, without whom our application would not have been born.</string>
+    <string name="app_image">App image</string>
+    <string name="loading_image">loading image</string>
 </resources>

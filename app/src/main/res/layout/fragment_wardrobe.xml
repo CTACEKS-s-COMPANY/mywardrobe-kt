@@ -39,7 +39,7 @@
             android:contentDescription="@string/no_items" />
 
         <TextView
-            style="@style/TextAppearance.Title"
+            android:textAppearance="@style/TextAppearance.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -120,6 +120,7 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/newitembutton"
+        style="@style/Widget.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"

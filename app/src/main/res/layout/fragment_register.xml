@@ -22,7 +22,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="48dp"
             android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/main_icon_144" />
+            app:srcCompat="@drawable/main_icon_144"
+            android:contentDescription="@string/app_image" />
 
         <TextView
             android:layout_width="wrap_content"
