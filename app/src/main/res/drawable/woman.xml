@@ -59,7 +59,7 @@
             android:fillColor="#3B2645"
             android:pathData="M84.9065 26.4839C94.1 25.5333 100.943 18.885 100.192 11.6346C99.4398 4.38423 91.3775 -0.72269 82.184 0.227987C72.9904 1.17866 66.147 7.82694 66.8988 15.0773C67.6506 22.3277 75.7129 27.4346 84.9065 26.4839Z" />
         <path
-            android:fillColor="#AD00FF"
+            android:fillColor="@color/ShirtBandColor"
             android:fillAlpha="0.5"
             android:strokeAlpha="0.5"
             android:strokeWidth="1"

@@ -10,76 +10,37 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/swapButton"
-        style="@style/Widget.Button"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="43dp"
-        android:text="@string/swap_button"
-        app:layout_constraintBottom_toBottomOf="@+id/GenerateButton"
-        app:layout_constraintEnd_toStartOf="@+id/GenerateButton"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Switcher"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <com.google.android.material.button.MaterialButton
 
         android:id="@+id/GenerateButton"
         style="@style/Widget.Button"
         android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="40dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="28dp"
         android:text="@string/create_outlook_items"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/swapButton" />
-
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/Switcher"
         android:layout_width="184dp"
         android:layout_height="64dp"
-        android:layout_marginEnd="28dp"
         android:checked="true"
         android:text="@string/switch_button_name"
-        android:textOff="on"
-        android:textOn="offf"
+
         app:layout_constraintBottom_toTopOf="@+id/GenerateButton"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/GenerateButton"
+        app:layout_constraintStart_toStartOf="@+id/GenerateButton"
         app:switchMinWidth="60dp"
         app:useMaterialThemeColors="true" />
-
-    <View
-        android:id="@+id/CollorViewTop"
-        android:layout_width="40dp"
-        android:layout_height="60dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <View
-        android:id="@+id/CollorViewMiddle"
-        android:layout_width="40dp"
-        android:layout_height="60dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CollorViewTop" />
-
-    <View
-        android:id="@+id/CollorViewBottom"
-        android:layout_width="40dp"
-        android:layout_height="60dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CollorViewMiddle" />
 
     <ImageView
         android:id="@+id/BodyView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
         android:src="@drawable/woman"
+        app:layout_constraintBottom_toTopOf="@+id/Switcher"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -89,11 +50,41 @@
         android:id="@+id/textView"
         android:layout_width="109dp"
         android:layout_height="28dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="44dp"
         android:text="@string/primary_colors_text"
         android:textColor="#795548"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/CollorViewMiddle"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/CollorViewTop"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CollorViewTop" />
+
+    <View
+        android:id="@+id/CollorViewTop"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <View
+        android:id="@+id/CollorViewBottom"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/CollorViewMiddle"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CollorViewMiddle" />
 
     <ImageView
         android:id="@+id/PantsView"
