@@ -54,6 +54,7 @@
     <string name="no_clothes_in_database">Ooops, we don\'t have any items</string>
     <string name="settings">Settings</string>
     <string name="firebase_status_fmt">User:\n%s</string>
+    <string name="firebase_stat">YOU HAVE:\n%s items</string>
     <string name="choose_the_type_of_clothing">Choose the type of clothing</string>
     <string name="choose_the_color">Choose the color of clothing</string>
     <string name="tshirt">T-shirt</string>
