@@ -122,13 +122,13 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
         mBinding.PantsBandView.setColorFilter(minColor(rgb[1]))
 
         //Ботинки
-        mBinding.BootsTopView.setColorFilter(rgb[3])
-        mBinding.BootsBottomView.setColorFilter(minColor(rgb[3]))
+        mBinding.BootsTopView.setColorFilter(rgb[2])
+        mBinding.BootsBottomView.setColorFilter(minColor(rgb[2]))
 
         //Кубики с цветом
         mBinding.CollorViewTop.setBackgroundColor(rgb[0])
         mBinding.CollorViewMiddle.setBackgroundColor(rgb[1])
-        mBinding.CollorViewBottom.setBackgroundColor(rgb[3])
+        mBinding.CollorViewBottom.setBackgroundColor(rgb[2])
 
         mBinding.swapButton.setOnClickListener(){
             rgb[0] = rgb[1].also { rgb[1] = rgb[0] } //Сократил цвета сравнивать
@@ -142,8 +142,8 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
             mBinding.PantsBandView.setColorFilter(minColor(rgb[1]))
 
             //Ботинки
-            mBinding.BootsTopView.setColorFilter(rgb[3])
-            mBinding.BootsBottomView.setColorFilter(minColor(rgb[3]))
+            mBinding.BootsTopView.setColorFilter(rgb[2])
+            mBinding.BootsBottomView.setColorFilter(minColor(rgb[2]))
 
             //Кубики с цветом
             mBinding.CollorViewTop.setBackgroundColor(rgb[0])
