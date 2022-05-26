@@ -91,6 +91,14 @@
           }
         },
         {
+          "client_id": "123850857919-os6bfm2hmg8c29dbehtgvmr9a25k9lsn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.alexsas.mywardrobe_kt",
+            "certificate_hash": "2ed66dbfa5ebbd310e4bb72b158f1162be4085d8"
+          }
+        },
+        {
           "client_id": "123850857919-0kbv91ol9jqv1n9ensv60bl1lhgrr1o3.apps.googleusercontent.com",
           "client_type": 3
         }

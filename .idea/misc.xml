@@ -5,6 +5,10 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="..\:/Users/CTACEK/AndroidStudioProjects/mywardrobekt/app/src/main/res/layout/fragment_login.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/drawable/boots_bottom_woman.xml" value="0.343" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/drawable/woman.xml" value="0.343" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/fragment_outfit.xml" value="0.43125" />
+        <entry key="..\:/Users/iprav/StudioProjects/mywardrobe-kt/app/src/main/res/layout/item_clothes.xml" value="0.4432291666666667" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/branded_menu.xml" value="0.321" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/close_menu.xml" value="0.321" />
         <entry key="..\:/Users/mrusb/AndroidStudioProjects/mywardrobe-kt/app/src/main/res/drawable/filter.xml" value="0.321" />
@@ -38,24 +42,18 @@
         <entry key="app/src/main/res/drawable/filter.xml" value="0.1285" />
         <entry key="app/src/main/res/drawable/ic_add_white_24px.xml" value="0.184" />
         <entry key="app/src/main/res/drawable/ic_baseline_autorenew_150.xml" value="0.1695" />
-        <entry key="app/src/main/res/drawable/ic_creators_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_main_launcher.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/ic_pants_svgrepo_com.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_sad.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/logo.xml" value="0.142" />
         <entry key="app/src/main/res/drawable/main_icon.xml" value="0.142" />
         <entry key="app/src/main/res/drawable/main_icon_144.xml" value="0.142" />
         <entry key="app/src/main/res/drawable/menu.xml" value="0.142" />
-        <entry key="app/src/main/res/drawable/outfit_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/oval_button.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/pants_band_woman.xml" value="0.1415" />
-        <entry key="app/src/main/res/drawable/pants_woman.xml" value="0.1415" />
         <entry key="app/src/main/res/drawable/search.xml" value="0.142" />
         <entry key="app/src/main/res/drawable/splash.xml" value="0.142" />
         <entry key="app/src/main/res/drawable/tshirt_for_loading.xml" value="0.1145" />
         <entry key="app/src/main/res/drawable/tshirt_for_loading_fill.xml" value="0.1695" />
-        <entry key="app/src/main/res/drawable/woman.xml" value="0.1415" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2617283950617284" />
         <entry key="app/src/main/res/layout/fragment_aboutcreators.xml" value="0.13177083333333334" />
@@ -69,7 +67,7 @@
         <entry key="app/src/main/res/layout/fragment_outfit.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.22552083333333334" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.13177083333333334" />
-        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.24225006103515623" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.13177083333333334" />
         <entry key="app/src/main/res/layout/fragment_tabs.xml" value="0.2223731884057971" />
         <entry key="app/src/main/res/layout/fragment_wardrobe.xml" value="0.1" />
@@ -77,7 +75,6 @@
         <entry key="app/src/main/res/layout/item_restaurant.xml" value="0.45" />
         <entry key="app/src/main/res/layout/item_setting.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/menu/tabs_menu.xml" value="0.1859375" />
-        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_creators.xml" value="0.1" />
       </map>
     </option>
   </component>

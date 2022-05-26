@@ -47,7 +47,6 @@ abstract class FirestoreAdapter<VH : RecyclerView.ViewHolder>(private var query:
                 DocumentChange.Type.REMOVED -> onDocumentRemoved(change)
             }
         }
-
         onDataChanged()
     }
 

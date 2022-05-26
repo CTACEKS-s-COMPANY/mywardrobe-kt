@@ -1,16 +1,21 @@
 package ru.alexsas.mywardrobe_kt.utils
 
-class MatchingColorUtil (_r:Int,_g:Int,_b:Int) {
-    val r = _r
-    private val g = _g
-    private val b = _b
+import android.graphics.Color
+import androidx.core.graphics.blue
+import androidx.core.graphics.green
+import androidx.core.graphics.red
+
+class MatchingColorUtil (color:Int) {
+    val r = color.red
+    val g = color.green
+    val b = color.blue
 
     fun threeColors(): Array<Int> {
-        return arrayOf(r, g, b, g, b, r, b, r, g)
+        return arrayOf(Color.rgb(r, g, b),Color.rgb(g, b, r),Color.rgb(b, r, g))
     }
 
     fun twoColors(): Array<Int> {
-        return arrayOf(r, g, b, 255 - r, 255 - g, 255 - b)
+        return arrayOf(Color.rgb(r, g, b),Color.rgb( 255 - r, 255 - g, 255 - b))
     }
 
 }
