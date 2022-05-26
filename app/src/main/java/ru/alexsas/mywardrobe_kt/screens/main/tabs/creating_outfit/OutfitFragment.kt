@@ -36,27 +36,22 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
         val bootsList: MutableList<Int> = mutableListOf()
         firestore = Firebase.firestore
         auth = FirebaseAuth.getInstance()
-        userRef = firestore.collection("users").document(auth.uid.toString())/*
-        val itemsQuery = userRef.collection("clothes")
-        itemsQuery.get().addOnSuccessListener { querySnapshot ->
-            myList = querySnapshot.toObjects(Item::class.java)
-            color = myList[Random.nextInt(0,myList.size)].color
-        }
-        */
+        userRef = firestore.collection("users").document(auth.uid.toString())
+
 
         super.onViewCreated(view, savedInstanceState)
         mBinding = FragmentOutfitBinding.bind(view)
 
         //Детект сдвига свича
-        mBinding.Switcher.setOnCheckedChangeListener { compoundButton, isChecked ->
+        mBinding.Switcher.setOnCheckedChangeListener { _, isChecked ->
             switchOn = isChecked
         }
-        mBinding.GenerateButton.setOnClickListener() {
+        mBinding.GenerateButton.setOnClickListener {
             val itemsQuery = userRef.collection("clothes")
             itemsQuery.get().addOnSuccessListener { querySnapshot ->
                 myList = querySnapshot.toObjects(Item::class.java)
                 //перезапихивание предметов по 3 массивам
-                var maxi = myList.size-1
+                val maxi = myList.size-1
                 for (i in 0..maxi) {
                     Log.d("rar", "for cycle $i")
                     when (myList[i].type) {
@@ -69,8 +64,8 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
                 bootsList.shuffle()
                 //взятие случайной футболки и получение ее цвета
                 val rand = Random.nextInt(0, shirtList.size - 1)
-                val Hex = Integer.toString(shirtList[rand] - 16777216, 16)
-                val color: Int = Color.parseColor("#$Hex")
+                val hex = (shirtList[rand] - 16777216).toString(16)
+                val color: Int = Color.parseColor("#$hex")
 
                 //Запуски функции в зависимости от свитча
                 if (switchOn) {
@@ -85,10 +80,10 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
 
     //Функция сочетания двух цветов
     private fun matchTwoColorPressed(color: Int,pantsList: List<Int>){
-        val Coloring = MatchingColorUtil1(color)
-        var rgb = Coloring.twoColors()
+        val coloring = MatchingColorUtil1(color)
+        var rgb = coloring.twoColors()
         var flag = false
-        for (i in 0..(pantsList.size-1)){
+        for (i in pantsList.indices){
             if (sameColors(rgb[1],pantsList[i])){
                 rgb[1] = pantsList[i]
                 flag = true
@@ -96,8 +91,8 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
             }
         }
         if (!flag){
-            rgb = Coloring.threeColors()
-            for (i in 0..(pantsList.size-1)){
+            rgb = coloring.threeColors()
+            for (i in pantsList.indices){
                 if (sameColors(rgb[1],pantsList[i])){
                     rgb[1] = pantsList[i]
                     flag = true
@@ -111,8 +106,8 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
             }
         }
         if (!flag){
-            rgb = Coloring.threeColors()
-            for (i in 0..(pantsList.size-1)){
+            rgb = coloring.threeColors()
+            for (i in pantsList.indices){
                 if (sameColors(rgb[0],pantsList[i])){
                     rgb[1] = pantsList[i]
                     flag = true
@@ -142,9 +137,9 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
 
     //Функция сочетания трех цветов
     private fun matchTreeColorPressed(color: Int,pantsList: List<Int>,bootsList: List<Int>){
-        val Coloring = MatchingColorUtil1(color)
-        var rgb = Coloring.threeColors()
-        for (i in 0..(pantsList.size-1)){
+        val coloring = MatchingColorUtil1(color)
+        val rgb = coloring.threeColors()
+        for (i in pantsList.indices){
             if (sameColors(rgb[1],pantsList[i]) ||
                 sameColors(rgb[2],pantsList[i]) ||
                 sameColors(rgb[0],pantsList[i])){
@@ -155,7 +150,7 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
                 rgb[1] = Color.rgb(255,255,255)
             }
         }
-        for (i in 0..(bootsList.size-1)){
+        for (i in bootsList.indices){
             if (sameColors(rgb[1],bootsList[i]) ||
                 sameColors(rgb[2],bootsList[i]) ||
                 sameColors(rgb[0],bootsList[i])){
@@ -167,7 +162,7 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
             }
         }
         if (rgb[1] == Color.rgb(255,255,255) || rgb[2] == Color.rgb(255,255,255)){
-            for (i in 0..(pantsList.size-1)){
+            for (i in pantsList.indices){
                 if (sameColors(rgb[1],pantsList[i]) ||
                     sameColors(rgb[0],pantsList[i])){
                     rgb[1] = pantsList[i]
@@ -177,7 +172,7 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
                     rgb[1] = Color.rgb(255,255,255)
                 }
             }
-            for (i in 0..(bootsList.size-1)){
+            for (i in bootsList.indices){
                 if (sameColors(rgb[1],bootsList[i])||
                     sameColors(rgb[0],bootsList[i])){
                     rgb[2] = bootsList[i]
@@ -220,7 +215,7 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
     }
 
     //Нахождение тона цвета потемнее
-    fun minColor(color:Int):Int{ //Понижение цвета
+    private fun minColor(color:Int):Int{ //Понижение цвета
         var r = color.red
         var g = color.green
         var b =color.blue
