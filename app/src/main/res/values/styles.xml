@@ -9,6 +9,7 @@
         <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
         <item name="android:windowNoTitle">true</item>
         <item name="shapeAppearanceSmallComponent">@style/App.SmallComponent</item>
+        <item name="background">@drawable/outfit_background</item>
     </style>
 
     <style name="Main.Theme.Subheader">

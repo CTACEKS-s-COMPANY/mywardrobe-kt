@@ -2,6 +2,7 @@ package ru.alexsas.mywardrobe_kt.adapter
 
 import android.graphics.Color
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.DocumentSnapshot
@@ -31,13 +32,26 @@ abstract class ItemAdapter(query: Query) :
             val item: Item? = snapshot.toObject(Item::class.java)
             binding.clothesItemType.text = item?.type
             when (binding.clothesItemType.text.toString()){
-                "Pants" -> binding.clothesItemImage.setImageResource(R.drawable.ic_pants_svgrepo_com)
-                "Boots" -> binding.clothesItemImage.setImageResource(R.drawable.ic_shoes_shoe_svgrepo_com)
-                "T-shirt" -> binding.clothesItemImage.setImageResource(R.drawable.ic_t_shirt_svgrepo_com)
-                else -> binding.clothesItemImage.setImageResource(R.drawable.ic_sad)
+                "Pants" -> {
+                    binding.clothesItemImage.setImageResource(R.drawable.ic_pants_all)
+                    binding.clothesItemImageFill.visibility = View.INVISIBLE
+                    binding.clothesItemImage.setColorFilter(Color.parseColor("#"+Integer.toHexString(item!!.color)))
+                }
+                "Boots" ->{
+                    binding.clothesItemImage.setImageResource(R.drawable.ic_boots_all)
+                    binding.clothesItemImage.setColorFilter(Color.parseColor("#"+Integer.toHexString(item!!.color)))
+                    binding.clothesItemImageFill.visibility = View.INVISIBLE
+
+                }
+                "T-shirt" -> {
+                    binding.clothesItemImage.setImageResource(R.drawable.ic_tshirt_all)
+                    binding.clothesItemImageFill.visibility = View.INVISIBLE
+                    binding.clothesItemImage.setColorFilter(Color.parseColor("#"+Integer.toHexString(item!!.color)))
+                }
+//                else -> binding.clothesItemImage.setImageResource(R.drawable.ic_sad)
             }
 //            Log.d("BBB", item?.color.toString() + "\t" + Integer.toHexString(item!!.color))
-            binding.clothesItemImage.setColorFilter(Color.parseColor("#"+Integer.toHexString(item!!.color)))
+//            binding.clothesItemImage.setColorFilter(Color.parseColor("#"+Integer.toHexString(item!!.color)))
         }
     }
 }

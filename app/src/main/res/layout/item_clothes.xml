@@ -11,11 +11,21 @@
         android:id="@+id/clothesItemImage"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:scaleType="centerCrop"
+        android:contentDescription="@string/loading_image"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tshirt_for_loading_fill"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/clothesItemImageFill"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/loading_image"
+        android:scaleType="fitCenter"
         android:src="@drawable/tshirt_for_loading"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/loading_image" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/clothesItemType"
@@ -26,6 +36,7 @@
         app:layout_constraintStart_toEndOf="@id/clothesItemImage"
         app:layout_constraintTop_toTopOf="@id/clothesItemImage"
         android:text="@string/test_item"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

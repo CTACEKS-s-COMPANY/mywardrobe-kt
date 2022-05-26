@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:background="@drawable/outfit_background"
     tools:context=".screens.main.tabs.profile.ProfileFragment">
 
 

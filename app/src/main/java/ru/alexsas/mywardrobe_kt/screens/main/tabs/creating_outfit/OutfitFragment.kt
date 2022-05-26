@@ -134,9 +134,9 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
         mBinding.BootsBottomView.clearColorFilter()
 
         //Кубики с цветом
-        mBinding.CollorViewTop.setBackgroundColor(rgb[0])
-        mBinding.CollorViewMiddle.setBackgroundColor(rgb[1])
-        mBinding.CollorViewBottom.setBackgroundColor(Color.rgb(255,255,255))
+        mBinding.CollorViewTop.setColorFilter(rgb[0])
+        mBinding.CollorViewMiddle.setColorFilter(rgb[1])
+        mBinding.CollorViewBottom.setColorFilter(Color.rgb(255,255,255))
     }
 
 
