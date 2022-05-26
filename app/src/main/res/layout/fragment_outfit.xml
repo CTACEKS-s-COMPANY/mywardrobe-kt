@@ -57,30 +57,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
+    <ImageView
         android:id="@+id/CollorViewMiddle"
         android:layout_width="40dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
+        android:src="@drawable/background_primary_colors"
         app:layout_constraintEnd_toEndOf="@+id/CollorViewTop"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CollorViewTop" />
 
-    <View
+    <ImageView
         android:id="@+id/CollorViewTop"
         android:layout_width="40dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
+        android:src="@drawable/background_primary_colors"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <View
+    <ImageView
         android:id="@+id/CollorViewBottom"
         android:layout_width="40dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="4dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/background_primary_colors"
         app:layout_constraintEnd_toEndOf="@+id/CollorViewMiddle"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

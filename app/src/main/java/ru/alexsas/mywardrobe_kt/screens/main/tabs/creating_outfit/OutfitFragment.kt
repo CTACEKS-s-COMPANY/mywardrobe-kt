@@ -65,6 +65,8 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
                         "Boots" -> bootsList.add(myList[i].color)
                     }
                 }
+                pantsList.shuffle()
+                bootsList.shuffle()
                 //взятие случайной футболки и получение ее цвета
                 val rand = Random.nextInt(0, shirtList.size - 1)
                 val Hex = Integer.toString(shirtList[rand] - 16777216, 16)
@@ -200,9 +202,9 @@ class OutfitFragment : Fragment(R.layout.fragment_outfit) {
         mBinding.BootsBottomView.setColorFilter(minColor(rgb[2]))
 
         //Кубики с цветом
-        mBinding.CollorViewTop.setBackgroundColor(rgb[0])
-        mBinding.CollorViewMiddle.setBackgroundColor(rgb[1])
-        mBinding.CollorViewBottom.setBackgroundColor(rgb[2])
+        mBinding.CollorViewTop.setColorFilter(rgb[0])
+        mBinding.CollorViewMiddle.setColorFilter(rgb[1])
+        mBinding.CollorViewBottom.setColorFilter(rgb[2])
     }
 
     //Проверка на "похожесть" цвета
