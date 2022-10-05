@@ -11,9 +11,8 @@ Uses for creation outfit
 
 Documentation Here
 
-## Developers
+## Developers (Git's)
 
 - [CTACEK](https://github.com/CTACEK)
 - [AlexandrPravdin](https://github.com/AlexandrPravdin)
 
-## License
